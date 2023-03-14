@@ -12,7 +12,7 @@ describe('Resend homework', () => {
         cy.get('button[type="submit"]')
             .click();        
         
-        cy.url().should('eq', 'https://www.edu.goit.global/pl/homepage');
+        cy.url({timeout: 10000}).should('eq', 'https://www.edu.goit.global/pl/homepage');
         cy.get('button[color="primary"]')
             .should("be.visible")
             .wait(3000)
